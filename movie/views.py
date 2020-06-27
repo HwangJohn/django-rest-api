@@ -16,6 +16,7 @@ class MovieList(APIView):
         serializer = MovieSerializer(queryset, many=True)
         return Response(serializer.data, content_type=u"application/json; charset=utf-8")
 
+class MovieAdd(APIView):
     """
         영화 리스트 생성
     """
@@ -32,7 +33,7 @@ class MovieList(APIView):
         if serializer.is_valid() :
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)         
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)             
 
 class MovieDetail(APIView):
 
