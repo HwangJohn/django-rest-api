@@ -3,3 +3,7 @@
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*__pycache__/
+movie/__pycache__/
+movie/migrations/__pycache__/
+myproj/__pycache__/
